@@ -10,6 +10,8 @@ const SideBarMenu = function (color, direction) {
     this.init()
 }
 
+
+
 SideBarMenu.prototype.init = function () {
     this.render()
 }
@@ -40,11 +42,8 @@ SideBarMenu.prototype.render = function () {
 
 
 SideBarMenu.prototype.toggleMenu = function () {
-    if (this.isOpen === true) { this.isOpen = false }
-    if (!this.isOpen === false) { this.isOpen = true }
+    this.isOpen =!this.isOpen
     this.render()
 }
 
-const menu1 = new SideBarMenu()
-const menu2 = new SideBarMenu('green', 'right')
-menu2.toggleMenu()
+

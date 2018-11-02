@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <script src = script.js></script>
+    <script src=ClickableButton.js></script>
+    <script src=SideBarMenu.js></script>
+    <script>
+        const menu1 = new SideBarMenu()
+        const menu2 = new SideBarMenu('green', 'right')
+        menu1.toggleMenu()
+        menu2.toggleMenu()
+
+        const button = new ClickableButton('kliknij mnie',  menu2.toggleMenu.bind(menu2))
+    </script>
 </body>
+
 </html>
